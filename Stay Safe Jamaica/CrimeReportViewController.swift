@@ -10,7 +10,7 @@ import UIKit
 
 class CrimeReportViewController: UIViewController
 {
-    @IBOutlet weak var crimeDescription: UITextView!
+    @IBOutlet weak var crimeDescriptionTextView: UITextView!
     
     var buttonSelected: UIButton?
     

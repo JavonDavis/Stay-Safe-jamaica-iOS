@@ -206,7 +206,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9Y7-Ez-9hP"/>
                     <connections>
-                        <outlet property="crimeDescription" destination="z8J-35-zpz" id="aVf-yL-FhY"/>
+                        <outlet property="crimeDescriptionTextView" destination="z8J-35-zpz" id="aVf-yL-FhY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TwR-zm-eRW" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -12,7 +12,7 @@ import UIKit
 extension CrimeReportViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        crimeDescription.resignFirstResponder()
+        crimeDescriptionTextView.resignFirstResponder()
     }
     
     func subscribeToKeyboardNotifications() {
@@ -33,7 +33,7 @@ extension CrimeReportViewController {
     
     func keyboardWillShow(_ notification:Notification) {
         resetView()
-        if crimeDescription.isFirstResponder {
+        if crimeDescriptionTextView.isFirstResponder {
             view.frame.origin.y -= getKeyboardHeight(notification) // adjust the view based on keyboard
         }
     }
