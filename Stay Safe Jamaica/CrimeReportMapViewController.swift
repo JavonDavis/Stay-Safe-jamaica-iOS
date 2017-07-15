@@ -17,19 +17,17 @@ class CrimeReportMapViewController: UIViewController
     var userRegion: MKCoordinateRegion?
     let crimeReportSegueIdentifier = "showCrimeReportViewController"
     
-    override func viewDidLoad()
+    override func viewWillAppear(_ animated: Bool)
     {
-        super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         setup()
     }
     
     func setup()
     {
         // Hide the navigation bar
-        navigationController?.navigationBar.isHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
         
         setupMapView()
         setupLocation()

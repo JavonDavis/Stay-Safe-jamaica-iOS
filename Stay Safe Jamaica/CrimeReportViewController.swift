@@ -21,13 +21,17 @@ class CrimeReportViewController: UIViewController
     var reportCategory: String?
     var reportDescription: String?
     
-    override func viewDidLoad()
+    override func viewWillAppear(_ animated: Bool)
     {
-        super.viewDidLoad()
+        super.viewWillAppear(animated)
+        
+        //show navigation bar
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     
-    @IBAction func selectReportCategory(_ sender: UIButton) {
+    @IBAction func selectReportCategory(_ sender: UIButton)
+    {
         if let buttonSelected = buttonSelected
         {
             buttonSelected.isSelected = false
