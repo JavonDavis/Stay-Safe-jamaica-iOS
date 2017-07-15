@@ -12,15 +12,27 @@ import MapKit
 class CrimeReportMapViewController: UIViewController
 {
     @IBOutlet weak var crimeReportMapView: MKMapView?
-    var locationManager: CLLocationManager?
+    var locationManager = CLLocationManager()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
+        setup()
+
+    }
+    
+    func setup() {
+        setupMapView()
+        setupLocation()
+    }
+    
+    func setupMapView() {
         crimeReportMapView?.delegate = self
         crimeReportMapView?.showsUserLocation = true
-        
+    }
+
+    func setupLocation() {
         //check for location services
         if (CLLocationManager.locationServicesEnabled())
         {
@@ -31,17 +43,14 @@ class CrimeReportMapViewController: UIViewController
             locationManager.requestWhenInUseAuthorization()
         }
         
-        let coordinate = crimeReportMapView?.centerCoordinate
-        
-        focus(mapView: crimeReportMapView!, location: coordinate!)
-    }
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled()
+        {
+            locationManager.startUpdatingLocation()
+        }
 
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
+    
     func focus(mapView: MKMapView, location: CLLocationCoordinate2D)
     {
         let latitude = CLLocationDegrees(18.1096)
@@ -56,16 +65,18 @@ class CrimeReportMapViewController: UIViewController
     
     @IBAction func crimeReportUserLocation(_ sender: UIButton)
     {
-        locationManager.requestWhenInUseAuthorization()
-        if CLLocationManager.locationServicesEnabled()
-        {
-            locationManager.startUpdatingLocation()
-        }
-        
-        
     }
 }
 
 extension CrimeReportMapViewController: MKMapViewDelegate{}
 
-extension CrimeReportMapViewController: CLLocationManagerDelegate{}
+extension CrimeReportMapViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last!
+        
+        let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        
+        crimeReportMapView?.setRegion(region, animated: true)
+    }
+}

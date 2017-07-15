@@ -12,8 +12,6 @@
 		0A241C221F19F088001D3F79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A241C201F19F088001D3F79 /* Main.storyboard */; };
 		0A241C241F19F088001D3F79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A241C231F19F088001D3F79 /* Assets.xcassets */; };
 		0A241C271F19F088001D3F79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A241C251F19F088001D3F79 /* LaunchScreen.storyboard */; };
-		0AD6F15E1F1A1ED000D97194 /* ReportCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD6F15D1F1A1ED000D97194 /* ReportCategoryView.xib */; };
-		0AD6F1601F1A22AE00D97194 /* ReportCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD6F15F1F1A22AE00D97194 /* ReportCategoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +22,6 @@
 		0A241C231F19F088001D3F79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A241C261F19F088001D3F79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A241C281F19F088001D3F79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0AD6F15D1F1A1ED000D97194 /* ReportCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportCategoryView.xib; sourceTree = "<group>"; };
-		0AD6F15F1F1A22AE00D97194 /* ReportCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportCategoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +60,6 @@
 				0A241C231F19F088001D3F79 /* Assets.xcassets */,
 				0A241C251F19F088001D3F79 /* LaunchScreen.storyboard */,
 				0A241C281F19F088001D3F79 /* Info.plist */,
-				0AD6F15D1F1A1ED000D97194 /* ReportCategoryView.xib */,
-				0AD6F15F1F1A22AE00D97194 /* ReportCategoryView.swift */,
 			);
 			path = "Stay Safe Jamaica";
 			sourceTree = "<group>";
@@ -130,7 +124,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AD6F15E1F1A1ED000D97194 /* ReportCategoryView.xib in Resources */,
 				0A241C271F19F088001D3F79 /* LaunchScreen.storyboard in Resources */,
 				0A241C241F19F088001D3F79 /* Assets.xcassets in Resources */,
 				0A241C221F19F088001D3F79 /* Main.storyboard in Resources */,
@@ -144,7 +137,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AD6F1601F1A22AE00D97194 /* ReportCategoryView.swift in Sources */,
 				0A241C1F1F19F088001D3F79 /* CrimeReportMapViewController.swift in Sources */,
 				0A241C1D1F19F088001D3F79 /* AppDelegate.swift in Sources */,
 			);
