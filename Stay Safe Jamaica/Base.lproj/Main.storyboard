@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,13 +25,29 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rXp-tA-p31">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add Crime" translatesAutoresizingMaskIntoConstraints="NO" id="vZn-My-3SQ">
+                                <rect key="frame" x="307" y="595" width="52" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="5y3-uY-8lT"/>
+                                    <constraint firstAttribute="height" constant="52" id="A1N-cE-GV5"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="slk-gZ-LWr">
+                                <rect key="frame" x="307" y="535" width="52" height="52"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="vZn-My-3SQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="0Pz-wv-4JR"/>
+                            <constraint firstItem="slk-gZ-LWr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3SH-FR-hoo"/>
+                            <constraint firstItem="vZn-My-3SQ" firstAttribute="top" secondItem="slk-gZ-LWr" secondAttribute="bottom" constant="8" id="DmG-ga-Sva"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vZn-My-3SQ" secondAttribute="bottom" constant="20" id="MR2-df-089"/>
                             <constraint firstItem="rXp-tA-p31" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Oc6-8k-BTg"/>
                             <constraint firstAttribute="trailing" secondItem="rXp-tA-p31" secondAttribute="trailing" id="QoW-4W-hep"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rXp-tA-p31" secondAttribute="bottom" id="Tf8-C1-AhR"/>
+                            <constraint firstItem="slk-gZ-LWr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="515" id="YVC-QT-iSx"/>
                             <constraint firstItem="rXp-tA-p31" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sAX-Kr-J6H"/>
+                            <constraint firstItem="slk-gZ-LWr" firstAttribute="leading" secondItem="vZn-My-3SQ" secondAttribute="leading" id="xeA-hZ-rT4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -42,4 +59,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Add Crime" width="52" height="52"/>
+    </resources>
 </document>
