@@ -185,7 +185,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TwR-zm-eRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1927" y="103"/>
+            <point key="canvasLocation" x="2020" y="103"/>
         </scene>
         <!--Crime Report Map View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -214,12 +214,15 @@
                                     <constraint firstAttribute="width" constant="52" id="jI7-Ux-6qE"/>
                                 </constraints>
                                 <state key="normal" image="Add Crime"/>
+                                <connections>
+                                    <action selector="newCrimeReport:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kgV-AM-kAG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xg8-Tm-JH8">
                                 <rect key="frame" x="302" y="541" width="52" height="52"/>
                                 <state key="normal" image="User Location"/>
                                 <connections>
-                                    <action selector="crimeReportUserLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c0O-Km-ioS"/>
+                                    <action selector="refreshUserLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tg2-NL-ZMq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -240,6 +243,7 @@
                     <navigationItem key="navigationItem" id="V6y-ic-eTM"/>
                     <connections>
                         <outlet property="crimeReportMapView" destination="rXp-tA-p31" id="Etu-Zt-Zef"/>
+                        <segue destination="sYM-IY-yNm" kind="show" identifier="showCrimeReportViewController" id="Ddh-C8-VjA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

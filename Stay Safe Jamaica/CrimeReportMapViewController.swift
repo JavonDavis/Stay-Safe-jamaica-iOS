@@ -14,6 +14,7 @@ class CrimeReportMapViewController: UIViewController
     @IBOutlet weak var crimeReportMapView: MKMapView?
     var locationManager = CLLocationManager()
     var userRegion: MKCoordinateRegion?
+    let crimeReportSegueIdentifier = "showCrimeReportViewController"
     
     override func viewDidLoad()
     {
@@ -68,7 +69,7 @@ class CrimeReportMapViewController: UIViewController
         mapView.setRegion(region, animated: true)
     }
     
-    @IBAction func crimeReportUserLocation(_ sender: UIButton)
+    @IBAction func refreshUserLocation(_ sender: UIButton)
     {
         if let userRegion = userRegion
         {
@@ -80,6 +81,12 @@ class CrimeReportMapViewController: UIViewController
         }
         
     }
+    
+    @IBAction func newCrimeReport(_ sender: UIButton)
+    {
+        performSegue(withIdentifier: crimeReportSegueIdentifier, sender: self)
+    }
+    
 }
 
 extension CrimeReportMapViewController: MKMapViewDelegate{}
