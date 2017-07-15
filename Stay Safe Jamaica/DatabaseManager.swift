@@ -12,6 +12,8 @@ class DatabaseManager {
     
     static var shared = DatabaseManager()
     
+    var reports = [Report]()
+    
     func createReport( report: Report, completion: @escaping (Bool) ->()) {
         
         let serverUrl = Path.SERVER_URL + Path.POST_REPORT;

@@ -251,12 +251,17 @@
                                     <action selector="refreshUserLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tg2-NL-ZMq"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="YEP-9f-AY4">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <color key="color" red="0.25098039220000001" green="0.70196078429999997" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="MS2-dQ-dhD" secondAttribute="trailing" constant="21" id="D0e-wF-e7q"/>
                             <constraint firstItem="MS2-dQ-dhD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="D4h-CU-EtO"/>
                             <constraint firstItem="IYq-7B-hFw" firstAttribute="top" secondItem="xg8-Tm-JH8" secondAttribute="bottom" constant="1" id="DvO-47-6Wc"/>
+                            <constraint firstItem="YEP-9f-AY4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KaW-Ui-Xns"/>
                             <constraint firstItem="rXp-tA-p31" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Oc6-8k-BTg"/>
                             <constraint firstAttribute="trailing" secondItem="rXp-tA-p31" secondAttribute="trailing" id="QoW-4W-hep"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rXp-tA-p31" secondAttribute="bottom" id="Tf8-C1-AhR"/>
@@ -264,11 +269,13 @@
                             <constraint firstAttribute="trailing" secondItem="IYq-7B-hFw" secondAttribute="trailing" constant="21" id="p04-ta-BoE"/>
                             <constraint firstItem="rXp-tA-p31" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sAX-Kr-J6H"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IYq-7B-hFw" secondAttribute="bottom" constant="21" id="tBS-He-sqs"/>
+                            <constraint firstItem="YEP-9f-AY4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wEV-fJ-YV7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="V6y-ic-eTM"/>
                     <connections>
                         <outlet property="crimeReportMapView" destination="rXp-tA-p31" id="Etu-Zt-Zef"/>
+                        <outlet property="loadingIndicator" destination="YEP-9f-AY4" id="OXZ-rQ-ixT"/>
                         <segue destination="sYM-IY-yNm" kind="show" identifier="showCrimeReportViewController" id="Ddh-C8-VjA"/>
                     </connections>
                 </viewController>

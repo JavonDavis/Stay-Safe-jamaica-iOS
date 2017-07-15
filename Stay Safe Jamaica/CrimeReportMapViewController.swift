@@ -11,10 +11,13 @@ import MapKit
 
 class CrimeReportMapViewController: UIViewController
 {
-    @IBOutlet weak var crimeReportMapView: MKMapView?
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var crimeReportMapView: MKMapView!
     
     var locationManager = CLLocationManager()
     var userRegion: MKCoordinateRegion?
+    var annotations = [MKPointAnnotation]()
+    
     let crimeReportSegueIdentifier = "showCrimeReportViewController"
     
     override func viewWillAppear(_ animated: Bool)
@@ -41,6 +44,19 @@ class CrimeReportMapViewController: UIViewController
         
         setupMapView()
         setupLocation()
+    }
+    
+    func updateMap() {
+        loadingIndicator.stopAnimating()
+        crimeReportMapView.removeAnnotations(annotations)
+        annotations = [MKPointAnnotation]()
+        for crimeReport in DatabaseManager.shared.reports {
+            let coordinate = getCoordinate(latitude: crimeReport.lat!, longitude: crimeReport.lon!)
+            annotations.append(getAnnotationFromCoordinate(coordinate: coordinate))
+        }
+        
+        // When the array is complete, we add the annotations to the map.
+        crimeReportMapView.addAnnotations(annotations)
     }
     
     func setupMapView()
@@ -116,9 +132,9 @@ class CrimeReportMapViewController: UIViewController
 extension CrimeReportMapViewController: MKMapViewDelegate {
 //    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
 //        let reuseId = "pin"
-//        
+//
 //        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
-//        
+//
 //        if pinView == nil {
 //            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
 //            pinView!.canShowCallout = true
@@ -128,7 +144,7 @@ extension CrimeReportMapViewController: MKMapViewDelegate {
 //        else {
 //            pinView!.annotation = annotation
 //        }
-//        
+//
 //        return pinView
 //    }
 //    
@@ -145,6 +161,8 @@ extension CrimeReportMapViewController: CLLocationManagerDelegate
         
         if userRegion == nil
         {
+            print(location.coordinate.latitude)
+            print(location.coordinate.longitude)
             userRegion = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
             crimeReportMapView?.setRegion(userRegion!, animated: true)
         }

@@ -14,14 +14,14 @@ struct Report {
     var category: String?
     var description: String?
     var lat: Double?
-    var long: Double?
+    var lon: Double?
     
     init (category: String?, description: String?, lat: Double?, long: Double?) {
         
         self.category = category
         self.description = description
         self.lat = lat
-        self.long = long
+        self.lon = long
     }
     
     static func buildObject(_ report: Report?) -> [String:Any] {
@@ -31,7 +31,7 @@ struct Report {
             "description": report?.description ?? "",
             "location" : [
                 "lat": report?.lat,
-                "long": report?.long
+                "long": report?.lon
             ] as! [String: Double]
         
         ] as [String : Any]
