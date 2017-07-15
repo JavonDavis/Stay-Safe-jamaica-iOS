@@ -49,6 +49,9 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zy5-H9-Ndq">
                                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                                         <state key="normal" image="Shooting-Unselected"/>
+                                                                        <connections>
+                                                                            <action selector="reportShooting:" destination="sYM-IY-yNm" eventType="touchUpInside" id="PPi-FR-zNZ"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shooting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msl-Sh-bmU">
                                                                         <rect key="frame" x="0.0" y="79" width="74" height="20.5"/>
@@ -64,6 +67,9 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fof-Yb-MLa">
                                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                                         <state key="normal" image="Theft-Unselected"/>
+                                                                        <connections>
+                                                                            <action selector="reportTheft:" destination="sYM-IY-yNm" eventType="touchUpInside" id="RhW-pg-wag"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRy-q2-q1G">
                                                                         <rect key="frame" x="0.0" y="79" width="74" height="20.5"/>
@@ -79,6 +85,9 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsw-xp-pGy">
                                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                                         <state key="normal" image="Accident-Unselected"/>
+                                                                        <connections>
+                                                                            <action selector="reportAccident:" destination="sYM-IY-yNm" eventType="touchUpInside" id="wb7-U3-Ih8"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accident" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mf-YR-wtQ">
                                                                         <rect key="frame" x="0.0" y="79" width="74" height="20.5"/>
@@ -99,6 +108,9 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYt-Ml-tcn">
                                                                         <rect key="frame" x="0.0" y="0.0" width="111" height="74"/>
                                                                         <state key="normal" image="Sexual Assault-Unselected"/>
+                                                                        <connections>
+                                                                            <action selector="reportSexualAssault:" destination="sYM-IY-yNm" eventType="touchUpInside" id="KEH-lj-GkL"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sexual Assault" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay3-Jd-Esm">
                                                                         <rect key="frame" x="0.0" y="79" width="111" height="20.5"/>
@@ -114,6 +126,9 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8x-oP-YlL">
                                                                         <rect key="frame" x="0.0" y="0.0" width="94" height="74"/>
                                                                         <state key="normal" image="Other Crime-Unselected"/>
+                                                                        <connections>
+                                                                            <action selector="reportOtherCrime:" destination="sYM-IY-yNm" eventType="touchUpInside" id="LeZ-aj-0bZ"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other Crime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtJ-AC-0di">
                                                                         <rect key="frame" x="0.0" y="79" width="94" height="20.5"/>
@@ -163,6 +178,9 @@
                                 <state key="normal" title="Report">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitReport:" destination="sYM-IY-yNm" eventType="touchUpInside" id="QQb-O9-8xm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -182,6 +200,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9Y7-Ez-9hP"/>
+                    <connections>
+                        <outlet property="accident" destination="vsw-xp-pGy" id="Trb-sm-tB8"/>
+                        <outlet property="crimeDescription" destination="z8J-35-zpz" id="aVf-yL-FhY"/>
+                        <outlet property="otherCrime" destination="E8x-oP-YlL" id="6en-R1-o3V"/>
+                        <outlet property="sexualAssault" destination="DYt-Ml-tcn" id="nKJ-VN-OMC"/>
+                        <outlet property="shootingCrime" destination="zy5-H9-Ndq" id="vew-hQ-UuW"/>
+                        <outlet property="theft" destination="fof-Yb-MLa" id="ceS-kF-IHl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TwR-zm-eRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

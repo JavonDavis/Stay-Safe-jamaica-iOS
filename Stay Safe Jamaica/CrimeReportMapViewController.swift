@@ -12,6 +12,7 @@ import MapKit
 class CrimeReportMapViewController: UIViewController
 {
     @IBOutlet weak var crimeReportMapView: MKMapView?
+    
     var locationManager = CLLocationManager()
     var userRegion: MKCoordinateRegion?
     let crimeReportSegueIdentifier = "showCrimeReportViewController"
