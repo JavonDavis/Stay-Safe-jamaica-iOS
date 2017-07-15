@@ -18,15 +18,12 @@
 		0A241C271F19F088001D3F79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A241C251F19F088001D3F79 /* LaunchScreen.storyboard */; };
 		A75EC428C344E00503945D73 /* Pods_Stay_Safe_Jamaica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6965A82A2B970527B84FC99 /* Pods_Stay_Safe_Jamaica.framework */; };
 		EB61C0F01F1A462000625116 /* CrimeReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB61C0EF1F1A462000625116 /* CrimeReportViewController.swift */; };
-
-
-		F3190A311F1A9DC600C172BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3190A301F1A9DC600C172BA /* LoginViewController.swift */; };
-
 		EB61C1001F1A832300625116 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB61C0FF1F1A832300625116 /* Constants.swift */; };
 		EB61C1021F1A839500625116 /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB61C1011F1A839500625116 /* HttpManager.swift */; };
 		EB61C1041F1A840F00625116 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB61C1031F1A840F00625116 /* DatabaseManager.swift */; };
 		EB61C1061F1A8B5B00625116 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB61C1051F1A8B5B00625116 /* Models.swift */; };
-
+		F3190A311F1A9DC600C172BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3190A301F1A9DC600C172BA /* LoginViewController.swift */; };
+		F3190A331F1AC5F800C172BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3190A321F1AC5F800C172BA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,13 +42,12 @@
 		95BAC76E46A52D17157331E3 /* Pods-Stay Safe Jamaica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stay Safe Jamaica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stay Safe Jamaica/Pods-Stay Safe Jamaica.debug.xcconfig"; sourceTree = "<group>"; };
 		A6965A82A2B970527B84FC99 /* Pods_Stay_Safe_Jamaica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stay_Safe_Jamaica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB61C0EF1F1A462000625116 /* CrimeReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrimeReportViewController.swift; sourceTree = "<group>"; };
-
-		F3190A301F1A9DC600C172BA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-
 		EB61C0FF1F1A832300625116 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EB61C1011F1A839500625116 /* HttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
 		EB61C1031F1A840F00625116 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		EB61C1051F1A8B5B00625116 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		F3190A301F1A9DC600C172BA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F3190A321F1AC5F800C172BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +99,7 @@
 				0A0B8D351F1A95B700DC8D23 /* Utils.swift */,
 				0A0B8D371F1A99B900DC8D23 /* UIViewController+Utils.swift */,
 				0A0B8D391F1ABADA00DC8D23 /* GCDBlackBox.swift */,
+				F3190A321F1AC5F800C172BA /* GoogleService-Info.plist */,
 			);
 			path = "Stay Safe Jamaica";
 			sourceTree = "<group>";
@@ -188,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A241C271F19F088001D3F79 /* LaunchScreen.storyboard in Resources */,
+				F3190A331F1AC5F800C172BA /* GoogleService-Info.plist in Resources */,
 				0A241C241F19F088001D3F79 /* Assets.xcassets in Resources */,
 				0A241C221F19F088001D3F79 /* Main.storyboard in Resources */,
 			);
