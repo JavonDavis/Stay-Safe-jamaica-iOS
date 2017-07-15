@@ -22,17 +22,20 @@ class CrimeReportMapViewController: UIViewController
 
     }
     
-    func setup() {
+    func setup()
+    {
         setupMapView()
         setupLocation()
     }
     
-    func setupMapView() {
+    func setupMapView()
+    {
         crimeReportMapView?.delegate = self
         crimeReportMapView?.showsUserLocation = true
     }
 
-    func setupLocation() {
+    func setupLocation()
+    {
         //check for location services
         if (CLLocationManager.locationServicesEnabled())
         {
@@ -60,6 +63,7 @@ class CrimeReportMapViewController: UIViewController
         let span: MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
         let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
         let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+        
         mapView.setRegion(region, animated: true)
     }
     
@@ -70,8 +74,10 @@ class CrimeReportMapViewController: UIViewController
 
 extension CrimeReportMapViewController: MKMapViewDelegate{}
 
-extension CrimeReportMapViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+extension CrimeReportMapViewController: CLLocationManagerDelegate
+{
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
         let location = locations.last!
         
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
