@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A0B8D341F1A8E2E00DC8D23 /* CrimeReportViewController+KeyboardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B8D331F1A8E2E00DC8D23 /* CrimeReportViewController+KeyboardUtils.swift */; };
+		0A0B8D361F1A95B700DC8D23 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0B8D351F1A95B700DC8D23 /* Utils.swift */; };
 		0A241C1D1F19F088001D3F79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A241C1C1F19F088001D3F79 /* AppDelegate.swift */; };
 		0A241C1F1F19F088001D3F79 /* CrimeReportMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A241C1E1F19F088001D3F79 /* CrimeReportMapViewController.swift */; };
 		0A241C221F19F088001D3F79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A241C201F19F088001D3F79 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		0A0B8D331F1A8E2E00DC8D23 /* CrimeReportViewController+KeyboardUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrimeReportViewController+KeyboardUtils.swift"; sourceTree = "<group>"; };
+		0A0B8D351F1A95B700DC8D23 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		0A241C191F19F088001D3F79 /* Stay Safe Jamaica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stay Safe Jamaica.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A241C1C1F19F088001D3F79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A241C1E1F19F088001D3F79 /* CrimeReportMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeReportMapViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				0A241C231F19F088001D3F79 /* Assets.xcassets */,
 				0A241C251F19F088001D3F79 /* LaunchScreen.storyboard */,
 				0A241C281F19F088001D3F79 /* Info.plist */,
+				0A0B8D351F1A95B700DC8D23 /* Utils.swift */,
 			);
 			path = "Stay Safe Jamaica";
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A0B8D361F1A95B700DC8D23 /* Utils.swift in Sources */,
 				0A0B8D341F1A8E2E00DC8D23 /* CrimeReportViewController+KeyboardUtils.swift in Sources */,
 				EB61C0F01F1A462000625116 /* CrimeReportViewController.swift in Sources */,
 				0A241C1F1F19F088001D3F79 /* CrimeReportMapViewController.swift in Sources */,
