@@ -14,6 +14,7 @@
 		0A241C271F19F088001D3F79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A241C251F19F088001D3F79 /* LaunchScreen.storyboard */; };
 		0AD6F15E1F1A1ED000D97194 /* ReportCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD6F15D1F1A1ED000D97194 /* ReportCategoryView.xib */; };
 		0AD6F1601F1A22AE00D97194 /* ReportCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD6F15F1F1A22AE00D97194 /* ReportCategoryView.swift */; };
+		EB61C0F01F1A462000625116 /* CrimeReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB61C0EF1F1A462000625116 /* CrimeReportViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0A241C281F19F088001D3F79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AD6F15D1F1A1ED000D97194 /* ReportCategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportCategoryView.xib; sourceTree = "<group>"; };
 		0AD6F15F1F1A22AE00D97194 /* ReportCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportCategoryView.swift; sourceTree = "<group>"; };
+		EB61C0EF1F1A462000625116 /* CrimeReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrimeReportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				0A241C281F19F088001D3F79 /* Info.plist */,
 				0AD6F15D1F1A1ED000D97194 /* ReportCategoryView.xib */,
 				0AD6F15F1F1A22AE00D97194 /* ReportCategoryView.swift */,
+				EB61C0EF1F1A462000625116 /* CrimeReportViewController.swift */,
 			);
 			path = "Stay Safe Jamaica";
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AD6F1601F1A22AE00D97194 /* ReportCategoryView.swift in Sources */,
+				EB61C0F01F1A462000625116 /* CrimeReportViewController.swift in Sources */,
 				0A241C1F1F19F088001D3F79 /* CrimeReportMapViewController.swift in Sources */,
 				0A241C1D1F19F088001D3F79 /* AppDelegate.swift in Sources */,
 			);
