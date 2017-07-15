@@ -12,12 +12,25 @@ import MapKit
 class CrimeReportMapViewController: UIViewController
 {
     @IBOutlet weak var crimeReportMapView: MKMapView?
+    var locationManager: CLLocationManager?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         crimeReportMapView?.delegate = self
+        crimeReportMapView?.showsUserLocation = true
+        
+        //check for location services
+        if (CLLocationManager.locationServicesEnabled())
+        {
+            locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.requestWhenInUseAuthorization()
+        }
+        
         let coordinate = crimeReportMapView?.centerCoordinate
         
         focus(mapView: crimeReportMapView!, location: coordinate!)
@@ -40,7 +53,19 @@ class CrimeReportMapViewController: UIViewController
         let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
         mapView.setRegion(region, animated: true)
     }
+    
+    @IBAction func crimeReportUserLocation(_ sender: UIButton)
+    {
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled()
+        {
+            locationManager.startUpdatingLocation()
+        }
+        
+        
+    }
 }
 
 extension CrimeReportMapViewController: MKMapViewDelegate{}
 
+extension CrimeReportMapViewController: CLLocationManagerDelegate{}
