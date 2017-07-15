@@ -49,6 +49,7 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zy5-H9-Ndq">
                                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                                         <state key="normal" image="Shooting-Unselected"/>
+                                                                        <state key="selected" image="Shooting"/>
                                                                         <connections>
                                                                             <action selector="reportShooting:" destination="sYM-IY-yNm" eventType="touchUpInside" id="PPi-FR-zNZ"/>
                                                                         </connections>
@@ -300,6 +301,7 @@
         <image name="Add Crime" width="52" height="52"/>
         <image name="Other Crime-Unselected" width="74" height="74"/>
         <image name="Sexual Assault-Unselected" width="74" height="74"/>
+        <image name="Shooting" width="74" height="74"/>
         <image name="Shooting-Unselected" width="74" height="74"/>
         <image name="Theft-Unselected" width="74" height="74"/>
         <image name="User Location" width="52" height="52"/>
