@@ -8,68 +8,40 @@
 
 import UIKit
 
-enum Button
-{
-    case shootingCrime, theft, accident, sexualAssault, otherCrime, crimeDescription
-}
-
 class CrimeReportViewController: UIViewController
 {
-    @IBOutlet weak var shootingCrime: UIButton!
-    @IBOutlet weak var theft: UIButton!
-    @IBOutlet weak var accident: UIButton!
-    @IBOutlet weak var sexualAssault: UIButton!
-    @IBOutlet weak var otherCrime: UIButton!
     @IBOutlet weak var crimeDescription: UITextView!
     
     var buttonSelected: UIButton?
     
+    var categories = ["Shooting", "Theft", "Accident", "Sexual Assault", "Other"]
+    
+    var latitude: Double?
+    var longitude: Double?
+    var reportCategory: String?
+    var reportDescription: String?
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func reportShooting(_ sender: UIButton)
-    {
-        // TODO: Check if any buttons are already selected
+    
+    @IBAction func selectReportCategory(_ sender: UIButton) {
         if let buttonSelected = buttonSelected
         {
-            revertSelectedButton(button: buttonSelected)
+            buttonSelected.isSelected = false
         }
+        buttonSelected = sender
         
-    }
-    
-    func revertSelectedButton(button: UIButton)
-    {
-        button.isSelected = false
-    }
-    
-    @IBAction func reportTheft(_ sender: UIButton)
-    {
-    }
-    
-    @IBAction func reportAccident(_ sender: UIButton)
-    {
-    }
-    
-    @IBAction func reportSexualAssault(_ sender: UIButton)
-    {
-    }
-    
-    @IBAction func reportOtherCrime(_ sender: UIButton)
-    {
+        sender.isSelected = true
+        reportCategory = categories[sender.tag]
+        print("Category: \(reportCategory!)")
     }
     
     @IBAction func submitReport(_ sender: UIButton)
     {
+        
     }
     
 
