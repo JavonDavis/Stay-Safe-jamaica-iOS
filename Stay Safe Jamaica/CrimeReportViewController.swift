@@ -8,77 +8,55 @@
 
 import UIKit
 
-enum Button
-{
-    case shootingCrime, theft, accident, sexualAssault, otherCrime, crimeDescription
-}
-
 class CrimeReportViewController: UIViewController
 {
-    @IBOutlet weak var shootingCrime: UIButton!
-    @IBOutlet weak var theft: UIButton!
-    @IBOutlet weak var accident: UIButton!
-    @IBOutlet weak var sexualAssault: UIButton!
-    @IBOutlet weak var otherCrime: UIButton!
-    @IBOutlet weak var crimeDescription: UITextView!
+    @IBOutlet weak var crimeDescriptionTextView: UITextView!
     
     var buttonSelected: UIButton?
     
-    override func viewDidLoad()
+    var categories = ["Shooting", "Theft", "Accident", "Sexual Assault", "Other"]
+    
+    var latitude: Double?
+    var longitude: Double?
+    var reportCategory: String?
+    var reportDescription: String?
+    
+    override func viewWillAppear(_ animated: Bool)
     {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        super.viewWillAppear(animated)
+        subscribeToKeyboardNotifications()
+        //show navigation bar
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        
     }
     
-    @IBAction func reportShooting(_ sender: UIButton)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        unsubscribeFromKeyboardNotifications()
+    }
+    
+    func sendReport() {
+        
+    }
+    
+    
+    @IBAction func selectReportCategory(_ sender: UIButton)
     {
-        // TODO: Check if any buttons are already selected
         if let buttonSelected = buttonSelected
         {
-            revertSelectedButton(button: buttonSelected)
+            buttonSelected.isSelected = false
         }
+        buttonSelected = sender
         
-        shootingCrime.setImage(<#T##image: UIImage?##UIImage?#>, for: <#T##UIControlState#>)
-    }
-    
-    func revertSelectedButton(button: UIButton)
-    {
-        switch button
-        {
-            case shootingCrime: print("Shoot")
-            case theft: print("")
-            case accident: print("")
-            case sexualAssault: print("")
-            case otherCrime: print("")
-            default: ()
-        }
-    }
-    
-    @IBAction func reportTheft(_ sender: UIButton)
-    {
-    }
-    
-    @IBAction func reportAccident(_ sender: UIButton)
-    {
-    }
-    
-    @IBAction func reportSexualAssault(_ sender: UIButton)
-    {
-    }
-    
-    @IBAction func reportOtherCrime(_ sender: UIButton)
-    {
+        sender.isSelected = true
+        reportCategory = categories[sender.tag]
+        print("Category: \(reportCategory!)")
     }
     
     @IBAction func submitReport(_ sender: UIButton)
     {
+        reportDescription = crimeDescriptionTextView.text
+        sendReport()
     }
     
 

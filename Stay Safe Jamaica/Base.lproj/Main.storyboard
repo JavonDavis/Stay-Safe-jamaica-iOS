@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0Yw-n0-lms">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0Yw-n0-lms">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,13 +23,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bah-MX-25n">
-                                <rect key="frame" x="0.0" y="-15" width="375" height="453"/>
+                                <rect key="frame" x="0.0" y="5" width="375" height="433"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="AjN-MK-2aG">
-                                        <rect key="frame" x="33" y="73" width="309" height="307"/>
+                                        <rect key="frame" x="37.5" y="63" width="300" height="307"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What Crime Are You Reporting?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="51d-Hb-i5k">
-                                                <rect key="frame" x="0.0" y="0.0" width="309" height="33"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="33"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="33" id="LFv-i7-H7H"/>
                                                 </constraints>
@@ -38,20 +38,20 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="m7K-U7-Tem">
-                                                <rect key="frame" x="0.0" y="68" width="309" height="239"/>
+                                                <rect key="frame" x="0.0" y="68" width="300" height="239"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="W6h-Ec-vMn">
-                                                        <rect key="frame" x="8.5" y="0.0" width="292" height="99.5"/>
+                                                        <rect key="frame" x="4" y="0.0" width="292" height="99.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TCd-bk-H2C">
                                                                 <rect key="frame" x="0.0" y="0.0" width="74" height="99.5"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zy5-H9-Ndq">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zy5-H9-Ndq" userLabel="Shooting Button">
                                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                                         <state key="normal" image="Shooting-Unselected"/>
                                                                         <state key="selected" image="Shooting"/>
                                                                         <connections>
-                                                                            <action selector="reportShooting:" destination="sYM-IY-yNm" eventType="touchUpInside" id="PPi-FR-zNZ"/>
+                                                                            <action selector="selectReportCategory:" destination="sYM-IY-yNm" eventType="touchUpInside" id="gsN-NJ-jkz"/>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shooting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msl-Sh-bmU">
@@ -65,11 +65,12 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="reV-vJ-gKP">
                                                                 <rect key="frame" x="109" y="0.0" width="74" height="99.5"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fof-Yb-MLa">
+                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fof-Yb-MLa" userLabel="Theft Button">
                                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                                         <state key="normal" image="Theft-Unselected"/>
+                                                                        <state key="selected" image="Theft "/>
                                                                         <connections>
-                                                                            <action selector="reportTheft:" destination="sYM-IY-yNm" eventType="touchUpInside" id="RhW-pg-wag"/>
+                                                                            <action selector="selectReportCategory:" destination="sYM-IY-yNm" eventType="touchUpInside" id="ejH-ck-qO0"/>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRy-q2-q1G">
@@ -83,11 +84,12 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zai-vU-cEL">
                                                                 <rect key="frame" x="218" y="0.0" width="74" height="99.5"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsw-xp-pGy">
+                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsw-xp-pGy" userLabel="Accident Button">
                                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                                         <state key="normal" image="Accident-Unselected"/>
+                                                                        <state key="selected" image="Accident"/>
                                                                         <connections>
-                                                                            <action selector="reportAccident:" destination="sYM-IY-yNm" eventType="touchUpInside" id="wb7-U3-Ih8"/>
+                                                                            <action selector="selectReportCategory:" destination="sYM-IY-yNm" eventType="touchUpInside" id="afC-uo-3ho"/>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accident" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mf-YR-wtQ">
@@ -101,16 +103,17 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="EsP-Ss-Do5">
-                                                        <rect key="frame" x="34.5" y="139.5" width="240" height="99.5"/>
+                                                        <rect key="frame" x="30.5" y="139.5" width="239.5" height="99.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xuv-gj-fFw">
                                                                 <rect key="frame" x="0.0" y="0.0" width="111" height="99.5"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYt-Ml-tcn">
+                                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYt-Ml-tcn" userLabel="Sexual Assault Button">
                                                                         <rect key="frame" x="0.0" y="0.0" width="111" height="74"/>
                                                                         <state key="normal" image="Sexual Assault-Unselected"/>
+                                                                        <state key="selected" image="Sexual Assault "/>
                                                                         <connections>
-                                                                            <action selector="reportSexualAssault:" destination="sYM-IY-yNm" eventType="touchUpInside" id="KEH-lj-GkL"/>
+                                                                            <action selector="selectReportCategory:" destination="sYM-IY-yNm" eventType="touchUpInside" id="tIt-3D-bM1"/>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sexual Assault" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ay3-Jd-Esm">
@@ -122,17 +125,18 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bac-Ih-ZJK">
-                                                                <rect key="frame" x="146" y="0.0" width="94" height="99.5"/>
+                                                                <rect key="frame" x="146" y="0.0" width="93.5" height="99.5"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8x-oP-YlL">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="94" height="74"/>
+                                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8x-oP-YlL" userLabel="Other Button">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="74"/>
                                                                         <state key="normal" image="Other Crime-Unselected"/>
+                                                                        <state key="selected" image="Other Crime"/>
                                                                         <connections>
-                                                                            <action selector="reportOtherCrime:" destination="sYM-IY-yNm" eventType="touchUpInside" id="LeZ-aj-0bZ"/>
+                                                                            <action selector="selectReportCategory:" destination="sYM-IY-yNm" eventType="touchUpInside" id="o09-Jo-1NR"/>
                                                                         </connections>
                                                                     </button>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other Crime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtJ-AC-0di">
-                                                                        <rect key="frame" x="0.0" y="79" width="94" height="20.5"/>
+                                                                        <rect key="frame" x="0.0" y="79" width="93.5" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -153,7 +157,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's Happening?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yu-HG-SIl">
-                                <rect key="frame" x="91.5" y="463" width="192.5" height="26.5"/>
+                                <rect key="frame" x="94" y="463" width="187.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.25098039220000001" green="0.70196078429999997" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -202,12 +206,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9Y7-Ez-9hP"/>
                     <connections>
-                        <outlet property="accident" destination="vsw-xp-pGy" id="Trb-sm-tB8"/>
-                        <outlet property="crimeDescription" destination="z8J-35-zpz" id="aVf-yL-FhY"/>
-                        <outlet property="otherCrime" destination="E8x-oP-YlL" id="6en-R1-o3V"/>
-                        <outlet property="sexualAssault" destination="DYt-Ml-tcn" id="nKJ-VN-OMC"/>
-                        <outlet property="shootingCrime" destination="zy5-H9-Ndq" id="vew-hQ-UuW"/>
-                        <outlet property="theft" destination="fof-Yb-MLa" id="ceS-kF-IHl"/>
+                        <outlet property="crimeDescriptionTextView" destination="z8J-35-zpz" id="aVf-yL-FhY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TwR-zm-eRW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -230,7 +229,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MS2-dQ-dhD">
-                                <rect key="frame" x="282" y="49" width="56" height="26"/>
+                                <rect key="frame" x="283.5" y="49" width="54.5" height="26"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <color key="textColor" red="0.16862745098039217" green="0.71372549019607845" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -297,12 +296,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Accident" width="74" height="74"/>
         <image name="Accident-Unselected" width="74" height="74"/>
         <image name="Add Crime" width="52" height="52"/>
+        <image name="Other Crime" width="74" height="74"/>
         <image name="Other Crime-Unselected" width="74" height="74"/>
+        <image name="Sexual Assault " width="74" height="74"/>
         <image name="Sexual Assault-Unselected" width="74" height="74"/>
         <image name="Shooting" width="74" height="74"/>
         <image name="Shooting-Unselected" width="74" height="74"/>
+        <image name="Theft " width="74" height="74"/>
         <image name="Theft-Unselected" width="74" height="74"/>
         <image name="User Location" width="52" height="52"/>
     </resources>

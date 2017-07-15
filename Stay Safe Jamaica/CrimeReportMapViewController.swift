@@ -17,16 +17,18 @@ class CrimeReportMapViewController: UIViewController
     var userRegion: MKCoordinateRegion?
     let crimeReportSegueIdentifier = "showCrimeReportViewController"
     
-    override func viewDidLoad()
+    override func viewWillAppear(_ animated: Bool)
     {
-        super.viewDidLoad()
+        super.viewWillAppear(animated)
         
         setup()
-
     }
     
     func setup()
     {
+        // Hide the navigation bar
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        
         setupMapView()
         setupLocation()
     }
@@ -78,7 +80,7 @@ class CrimeReportMapViewController: UIViewController
         }
         else
         {
-            // TODO: Show an alert
+            showAlert(title: "Oops!", message: "Could not get your location. Please try again later")
         }
         
     }
@@ -88,9 +90,40 @@ class CrimeReportMapViewController: UIViewController
         performSegue(withIdentifier: crimeReportSegueIdentifier, sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == crimeReportSegueIdentifier {
+            let crimeReportVc = segue.destination as! CrimeReportViewController
+            let latitude = userRegion?.center.latitude
+            let longitude = userRegion?.center.longitude
+            
+            crimeReportVc.latitude = latitude
+            crimeReportVc.longitude = longitude
+        }
+    }
+    
 }
 
-extension CrimeReportMapViewController: MKMapViewDelegate{}
+extension CrimeReportMapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let reuseId = "pin"
+        
+        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
+        
+        if pinView == nil {
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView!.canShowCallout = true
+            pinView!.pinTintColor = .red
+            pinView!.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        }
+        else {
+            pinView!.annotation = annotation
+        }
+        
+        return pinView
+    }
+    
+    
+}
 
 extension CrimeReportMapViewController: CLLocationManagerDelegate
 {
