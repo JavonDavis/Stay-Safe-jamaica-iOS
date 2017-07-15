@@ -45,20 +45,11 @@ class CrimeReportViewController: UIViewController
             revertSelectedButton(button: buttonSelected)
         }
         
-        shootingCrime.setImage(<#T##image: UIImage?##UIImage?#>, for: <#T##UIControlState#>)
     }
     
     func revertSelectedButton(button: UIButton)
     {
-        switch button
-        {
-            case shootingCrime: print("Shoot")
-            case theft: print("")
-            case accident: print("")
-            case sexualAssault: print("")
-            case otherCrime: print("")
-            default: ()
-        }
+        button.isSelected = false
     }
     
     @IBAction func reportTheft(_ sender: UIButton)

@@ -68,6 +68,7 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fof-Yb-MLa">
                                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
                                                                         <state key="normal" image="Theft-Unselected"/>
+                                                                        <state key="selected" image="Theft "/>
                                                                         <connections>
                                                                             <action selector="reportTheft:" destination="sYM-IY-yNm" eventType="touchUpInside" id="RhW-pg-wag"/>
                                                                         </connections>
@@ -303,6 +304,7 @@
         <image name="Sexual Assault-Unselected" width="74" height="74"/>
         <image name="Shooting" width="74" height="74"/>
         <image name="Shooting-Unselected" width="74" height="74"/>
+        <image name="Theft " width="74" height="74"/>
         <image name="Theft-Unselected" width="74" height="74"/>
         <image name="User Location" width="52" height="52"/>
     </resources>
