@@ -39,18 +39,25 @@ struct Report {
         return reportObject
     }
     
-    static func buildReports(_ reportObjects: [[String: Any]]) -> [Report] {
+    static func buildReports(_ reportObjects: [String: Any]) -> [Report] {
         
         var reportArray = [Report]()
         
-        for report in reportObjects {
+        for (_, value) in reportObjects {
             
-            let location = report["location"] as! [String:Double]
-            
-            let reportObject = Report(category: report["category"] as? String, description: report["description"] as? String, lat: location["lat"]!, long: location["long"]! )
-            
-            reportArray.append(reportObject)
+            if let object = value as? [String: Any] {
+                if let location = object["location"] as? [String:Double] {
+        
+                    let reportObject = Report(category: object["category"] as? String, description: object["description"] as? String, lat: location["lat"]!, long: location["long"]! )
+                    
+                    reportArray.append(reportObject)
+                }
+            }
         }
+        
+        print(reportArray)
+        
         return reportArray
+        
     }
 }

@@ -42,11 +42,13 @@ class DatabaseManager {
         
         let serverUrl = Path.SERVER_URL + Path.POST_LIST
         
+        print(serverUrl)
+        
         HttpManager.shared.get(url: serverUrl, completion: { response  in
             
-            if let reports = response.result.value as? [[String : Any]] {
+            if let results = response.result.value as? [String: Any] {
                 
-                let reportArray = Report.buildReports(reports)
+                let reportArray = Report.buildReports(results)
                 
                 completion(reportArray, nil)
             } else {
