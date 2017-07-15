@@ -13,6 +13,7 @@ class CrimeReportMapViewController: UIViewController
 {
     @IBOutlet weak var crimeReportMapView: MKMapView?
     var locationManager = CLLocationManager()
+    var userRegion: MKCoordinateRegion?
     
     override func viewDidLoad()
     {
@@ -65,6 +66,12 @@ class CrimeReportMapViewController: UIViewController
     
     @IBAction func crimeReportUserLocation(_ sender: UIButton)
     {
+        if let userRegion = userRegion {
+            crimeReportMapView?.setRegion(userRegion, animated: true)
+        } else {
+            // TODO: Show an alert
+        }
+        
     }
 }
 
@@ -75,8 +82,6 @@ extension CrimeReportMapViewController: CLLocationManagerDelegate {
         let location = locations.last!
         
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-        
-        crimeReportMapView?.setRegion(region, animated: true)
+        userRegion = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
     }
 }
