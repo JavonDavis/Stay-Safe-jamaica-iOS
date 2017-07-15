@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0Yw-n0-lms">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -50,16 +50,110 @@
                             <constraint firstItem="slk-gZ-LWr" firstAttribute="leading" secondItem="vZn-My-3SQ" secondAttribute="leading" id="xeA-hZ-rT4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="V6y-ic-eTM"/>
                     <connections>
                         <outlet property="crimeReportMapView" destination="rXp-tA-p31" id="Etu-Zt-Zef"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1176.8" y="166.8665667166417"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oDy-kw-eaL">
+            <objects>
+                <viewController id="3jw-0a-4SB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C3u-5e-nDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="hx6-no-wnF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Jf-3C-bXv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wPc-Nt-WVp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4U9-Dk-4A1" customClass="ReportCategoryView" customModule="Stay_Safe_Jamaica" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="406"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="categoryImage" value="Accident"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="categoryText" value="Test"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwa-oh-a9W">
+                                <rect key="frame" x="87" y="592" width="200" height="55"/>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.70196078429999997" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Hvi-t9-EfA"/>
+                                    <constraint firstAttribute="height" constant="55" id="vUU-pY-zLm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="Report">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's Happening?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izV-Hk-ybG">
+                                <rect key="frame" x="83" y="414" width="209.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.25098039220000001" green="0.70196078429999997" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Optional" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NrD-aV-d2x">
+                                <rect key="frame" x="16" y="470" width="343" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ebC-zA-eaX"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hx6-no-wnF" firstAttribute="top" secondItem="bwa-oh-a9W" secondAttribute="bottom" constant="20" id="0GI-Gp-Js7"/>
+                            <constraint firstAttribute="trailing" secondItem="wPc-Nt-WVp" secondAttribute="trailing" id="6om-5v-Vbl"/>
+                            <constraint firstItem="bwa-oh-a9W" firstAttribute="centerX" secondItem="4Jf-3C-bXv" secondAttribute="centerX" id="CPz-pT-mHA"/>
+                            <constraint firstItem="bwa-oh-a9W" firstAttribute="top" secondItem="NrD-aV-d2x" secondAttribute="bottom" constant="22" id="Zcr-Lg-Rkc"/>
+                            <constraint firstItem="NrD-aV-d2x" firstAttribute="trailing" secondItem="4Jf-3C-bXv" secondAttribute="trailingMargin" id="cTt-w4-Tko"/>
+                            <constraint firstItem="izV-Hk-ybG" firstAttribute="top" secondItem="wPc-Nt-WVp" secondAttribute="bottom" constant="8" id="i27-qN-pXV"/>
+                            <constraint firstItem="NrD-aV-d2x" firstAttribute="leading" secondItem="4Jf-3C-bXv" secondAttribute="leadingMargin" id="ihn-H0-vXa"/>
+                            <constraint firstItem="NrD-aV-d2x" firstAttribute="top" secondItem="izV-Hk-ybG" secondAttribute="bottom" constant="27" id="m4t-QP-MHV"/>
+                            <constraint firstItem="izV-Hk-ybG" firstAttribute="centerX" secondItem="4Jf-3C-bXv" secondAttribute="centerX" id="q8I-oN-N5a"/>
+                            <constraint firstItem="wPc-Nt-WVp" firstAttribute="leading" secondItem="4Jf-3C-bXv" secondAttribute="leading" id="r3y-b3-eGy"/>
+                            <constraint firstItem="wPc-Nt-WVp" firstAttribute="top" secondItem="4Jf-3C-bXv" secondAttribute="top" id="uPg-cd-Bah"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HO9-yK-Y3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2000.8" y="188.45577211394306"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5uF-qJ-LfJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="0Yw-n0-lms" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qfa-Bj-ddh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="O5r-NY-dgx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u3f-Sf-Tfm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237.59999999999999" y="166.8665667166417"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Accident" width="74" height="74"/>
         <image name="Add Crime" width="52" height="52"/>
     </resources>
 </document>
