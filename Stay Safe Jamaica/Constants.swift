@@ -9,7 +9,7 @@
 import Foundation
 
 struct Path {
-    static let SERVER_URL = "192.168.0.35:3000";
+    static let SERVER_URL = "http://192.168.0.35:3000";
     static let POST_REPORT = "/api/report";
     static let POST_LIST = "/api/list";
 }

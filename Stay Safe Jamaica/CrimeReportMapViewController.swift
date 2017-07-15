@@ -22,6 +22,16 @@ class CrimeReportMapViewController: UIViewController
         super.viewWillAppear(animated)
         
         setup()
+        
+        DatabaseManager.shared.getReports(completion: { reports, error in
+            guard error == nil else {
+                print("No reports")
+                print(error?.localizedDescription)
+                return
+            }
+            
+            print("\(reports?.count) reports")
+        })
     }
     
     func setup()
@@ -104,24 +114,24 @@ class CrimeReportMapViewController: UIViewController
 }
 
 extension CrimeReportMapViewController: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        let reuseId = "pin"
-        
-        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
-        
-        if pinView == nil {
-            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-            pinView!.canShowCallout = true
-            pinView!.pinTintColor = .red
-            pinView!.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-        }
-        else {
-            pinView!.annotation = annotation
-        }
-        
-        return pinView
-    }
-    
+//    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+//        let reuseId = "pin"
+//        
+//        var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
+//        
+//        if pinView == nil {
+//            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+//            pinView!.canShowCallout = true
+//            pinView!.pinTintColor = .red
+//            pinView!.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+//        }
+//        else {
+//            pinView!.annotation = annotation
+//        }
+//        
+//        return pinView
+//    }
+//    
     
 }
 

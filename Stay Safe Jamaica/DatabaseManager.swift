@@ -16,7 +16,7 @@ class DatabaseManager {
         
         let serverUrl = Path.SERVER_URL + Path.POST_REPORT;
         
-        let objectPatameters = Report.buildObject(report: report)
+        let objectPatameters = Report.buildObject(report)
         
         HttpManager.shared.post(url: serverUrl, parameters: objectPatameters, completion: { response in
             
@@ -46,7 +46,7 @@ class DatabaseManager {
             
             if let reports = response.result.value as? [[String : Any]] {
                 
-                let reportArray = Report.buildArray(reports: reports)
+                let reportArray = Report.buildReports(reports)
                 
                 completion(reportArray, nil)
             } else {

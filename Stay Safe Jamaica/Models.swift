@@ -16,7 +16,7 @@ struct Report {
     var lat: Double?
     var long: Double?
     
-    init ( category: String?, description: String?, lat: Double?, long: Double?) {
+    init (category: String?, description: String?, lat: Double?, long: Double?) {
         
         self.category = category
         self.description = description
@@ -24,7 +24,7 @@ struct Report {
         self.long = long
     }
     
-    static func buildObject (report: Report?) -> [String:Any] {
+    static func buildObject(_ report: Report?) -> [String:Any] {
         
         let reportObject = [
             "category": report?.category ?? "",
@@ -39,11 +39,11 @@ struct Report {
         return reportObject
     }
     
-    static func buildArray (reports: [[String: Any]]) -> [Report] {
+    static func buildReports(_ reportObjects: [[String: Any]]) -> [Report] {
         
         var reportArray = [Report]()
         
-        for report in reports {
+        for report in reportObjects {
             
             let location = report["location"] as! [String:Double]
             
@@ -51,5 +51,6 @@ struct Report {
             
             reportArray.append(reportObject)
         }
+        return reportArray
     }
 }
