@@ -12,6 +12,7 @@
 		0A241C221F19F088001D3F79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A241C201F19F088001D3F79 /* Main.storyboard */; };
 		0A241C241F19F088001D3F79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A241C231F19F088001D3F79 /* Assets.xcassets */; };
 		0A241C271F19F088001D3F79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A241C251F19F088001D3F79 /* LaunchScreen.storyboard */; };
+		A75EC428C344E00503945D73 /* Pods_Stay_Safe_Jamaica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6965A82A2B970527B84FC99 /* Pods_Stay_Safe_Jamaica.framework */; };
 		EB61C0F01F1A462000625116 /* CrimeReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB61C0EF1F1A462000625116 /* CrimeReportViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,9 @@
 		0A241C231F19F088001D3F79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A241C261F19F088001D3F79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A241C281F19F088001D3F79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		302AF85AEA22D80978AE32CC /* Pods-Stay Safe Jamaica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stay Safe Jamaica.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stay Safe Jamaica/Pods-Stay Safe Jamaica.release.xcconfig"; sourceTree = "<group>"; };
+		95BAC76E46A52D17157331E3 /* Pods-Stay Safe Jamaica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stay Safe Jamaica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stay Safe Jamaica/Pods-Stay Safe Jamaica.debug.xcconfig"; sourceTree = "<group>"; };
+		A6965A82A2B970527B84FC99 /* Pods_Stay_Safe_Jamaica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stay_Safe_Jamaica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB61C0EF1F1A462000625116 /* CrimeReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrimeReportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A75EC428C344E00503945D73 /* Pods_Stay_Safe_Jamaica.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				0A241C1B1F19F088001D3F79 /* Stay Safe Jamaica */,
 				0A241C1A1F19F088001D3F79 /* Products */,
+				4E4F8A363F5DFB0E266B9712 /* Pods */,
+				CF2C3DC42C5FE2DC8FF03F86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = "Stay Safe Jamaica";
 			sourceTree = "<group>";
 		};
+		4E4F8A363F5DFB0E266B9712 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95BAC76E46A52D17157331E3 /* Pods-Stay Safe Jamaica.debug.xcconfig */,
+				302AF85AEA22D80978AE32CC /* Pods-Stay Safe Jamaica.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF2C3DC42C5FE2DC8FF03F86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6965A82A2B970527B84FC99 /* Pods_Stay_Safe_Jamaica.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A241C2B1F19F088001D3F79 /* Build configuration list for PBXNativeTarget "Stay Safe Jamaica" */;
 			buildPhases = (
+				8B254CA897D4BE1A1EF7668A /* [CP] Check Pods Manifest.lock */,
 				0A241C151F19F088001D3F79 /* Sources */,
 				0A241C161F19F088001D3F79 /* Frameworks */,
 				0A241C171F19F088001D3F79 /* Resources */,
+				8DCFB0772DDAF9F9C1DBF056 /* [CP] Embed Pods Frameworks */,
+				D80ABCB271C961210BCD50D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,6 +161,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8B254CA897D4BE1A1EF7668A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8DCFB0772DDAF9F9C1DBF056 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stay Safe Jamaica/Pods-Stay Safe Jamaica-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D80ABCB271C961210BCD50D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stay Safe Jamaica/Pods-Stay Safe Jamaica-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A241C151F19F088001D3F79 /* Sources */ = {
@@ -265,6 +340,7 @@
 		};
 		0A241C2C1F19F088001D3F79 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95BAC76E46A52D17157331E3 /* Pods-Stay Safe Jamaica.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W52FYE629M;
@@ -278,6 +354,7 @@
 		};
 		0A241C2D1F19F088001D3F79 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 302AF85AEA22D80978AE32CC /* Pods-Stay Safe Jamaica.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W52FYE629M;

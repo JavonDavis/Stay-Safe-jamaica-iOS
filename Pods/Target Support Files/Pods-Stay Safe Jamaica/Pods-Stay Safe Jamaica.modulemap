@@ -1,0 +1,6 @@
+framework module Pods_Stay_Safe_Jamaica {
+  umbrella header "Pods-Stay Safe Jamaica-umbrella.h"
+
+  export *
+  module * { export * }
+}
