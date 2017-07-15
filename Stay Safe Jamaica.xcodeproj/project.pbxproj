@@ -12,6 +12,7 @@
 		0A241C221F19F088001D3F79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A241C201F19F088001D3F79 /* Main.storyboard */; };
 		0A241C241F19F088001D3F79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A241C231F19F088001D3F79 /* Assets.xcassets */; };
 		0A241C271F19F088001D3F79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A241C251F19F088001D3F79 /* LaunchScreen.storyboard */; };
+		EB61C0F01F1A462000625116 /* CrimeReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB61C0EF1F1A462000625116 /* CrimeReportViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		0A241C231F19F088001D3F79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A241C261F19F088001D3F79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A241C281F19F088001D3F79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB61C0EF1F1A462000625116 /* CrimeReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrimeReportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				0A241C231F19F088001D3F79 /* Assets.xcassets */,
 				0A241C251F19F088001D3F79 /* LaunchScreen.storyboard */,
 				0A241C281F19F088001D3F79 /* Info.plist */,
+				EB61C0EF1F1A462000625116 /* CrimeReportViewController.swift */,
 			);
 			path = "Stay Safe Jamaica";
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB61C0F01F1A462000625116 /* CrimeReportViewController.swift in Sources */,
 				0A241C1F1F19F088001D3F79 /* CrimeReportMapViewController.swift in Sources */,
 				0A241C1D1F19F088001D3F79 /* AppDelegate.swift in Sources */,
 			);
