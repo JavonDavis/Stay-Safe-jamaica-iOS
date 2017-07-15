@@ -7,4 +7,7 @@ use_frameworks!
 
 target 'Stay Safe Jamaica' do
     pod 'Alamofire', '~> 4.4'
+    pod 'Firebase/Core'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
 end
