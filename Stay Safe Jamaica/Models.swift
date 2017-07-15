@@ -15,6 +15,7 @@ struct Report {
     var description: String?
     var lat: Double?
     var lon: Double?
+    var id: String?
     
     init (category: String?, description: String?, lat: Double?, long: Double?) {
         
@@ -43,12 +44,13 @@ struct Report {
         
         var reportArray = [Report]()
         
-        for (_, value) in reportObjects {
+        for (key, value) in reportObjects {
             
             if let object = value as? [String: Any] {
                 if let location = object["location"] as? [String:Double] {
         
-                    let reportObject = Report(category: object["category"] as? String, description: object["description"] as? String, lat: location["lat"]!, long: location["long"]! )
+                    var reportObject = Report(category: object["category"] as? String, description: object["description"] as? String, lat: location["lat"]!, long: location["long"]!)
+                    reportObject.id = key
                     
                     reportArray.append(reportObject)
                 }
