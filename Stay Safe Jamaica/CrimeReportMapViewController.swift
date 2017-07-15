@@ -90,6 +90,17 @@ class CrimeReportMapViewController: UIViewController
         performSegue(withIdentifier: crimeReportSegueIdentifier, sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == crimeReportSegueIdentifier {
+            let crimeReportVc = segue.destination as! CrimeReportViewController
+            let latitude = userRegion?.center.latitude
+            let longitude = userRegion?.center.longitude
+            
+            crimeReportVc.latitude = latitude
+            crimeReportVc.longitude = longitude
+        }
+    }
+    
 }
 
 extension CrimeReportMapViewController: MKMapViewDelegate{}

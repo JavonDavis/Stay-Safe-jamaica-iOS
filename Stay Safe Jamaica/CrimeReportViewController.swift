@@ -35,6 +35,10 @@ class CrimeReportViewController: UIViewController
         unsubscribeFromKeyboardNotifications()
     }
     
+    func sendReport() {
+        
+    }
+    
     
     @IBAction func selectReportCategory(_ sender: UIButton)
     {
@@ -51,7 +55,8 @@ class CrimeReportViewController: UIViewController
     
     @IBAction func submitReport(_ sender: UIButton)
     {
-        
+        reportDescription = crimeDescriptionTextView.text
+        sendReport()
     }
     
 
