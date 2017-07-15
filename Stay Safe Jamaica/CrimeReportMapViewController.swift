@@ -70,9 +70,12 @@ class CrimeReportMapViewController: UIViewController
     
     @IBAction func crimeReportUserLocation(_ sender: UIButton)
     {
-        if let userRegion = userRegion {
+        if let userRegion = userRegion
+        {
             crimeReportMapView?.setRegion(userRegion, animated: true)
-        } else {
+        }
+        else
+        {
             // TODO: Show an alert
         }
         
@@ -88,6 +91,15 @@ extension CrimeReportMapViewController: CLLocationManagerDelegate
         let location = locations.last!
         
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        userRegion = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        
+        if userRegion == nil
+        {
+            userRegion = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+            crimeReportMapView?.setRegion(userRegion!, animated: true)
+        }
+        else
+        {
+            userRegion = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        }
     }
 }
