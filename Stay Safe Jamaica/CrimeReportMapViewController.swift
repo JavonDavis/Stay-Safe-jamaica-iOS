@@ -80,7 +80,7 @@ class CrimeReportMapViewController: UIViewController
         }
         else
         {
-            // TODO: Show an alert
+            showAlert(title: "Oops!", message: "Could not get your location. Please try again later")
         }
         
     }
