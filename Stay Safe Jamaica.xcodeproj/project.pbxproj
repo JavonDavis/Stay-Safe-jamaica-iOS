@@ -33,6 +33,11 @@
 		EB61C1001F1A832300625116 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB61C0FF1F1A832300625116 /* Constants.swift */; };
 		EB61C1021F1A839500625116 /* HttpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB61C1011F1A839500625116 /* HttpManager.swift */; };
 		EB61C1041F1A840F00625116 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB61C1031F1A840F00625116 /* DatabaseManager.swift */; };
+		EB61C1061F1A8B5B00625116 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB61C1051F1A8B5B00625116 /* Models.swift */; };
+		F3190A311F1A9DC600C172BA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3190A301F1A9DC600C172BA /* LoginViewController.swift */; };
+		F3190A331F1AC5F800C172BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F3190A321F1AC5F800C172BA /* GoogleService-Info.plist */; };
+		F3190A351F1AF58600C172BA /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3190A341F1AF58600C172BA /* RegisterViewController.swift */; };
+		F3190A371F1B1AD400C172BA /* LoginViewController+KeyboardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3190A361F1B1AD400C172BA /* LoginViewController+KeyboardUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +71,11 @@
 		EB61C0FF1F1A832300625116 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EB61C1011F1A839500625116 /* HttpManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpManager.swift; sourceTree = "<group>"; };
 		EB61C1031F1A840F00625116 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		EB61C1051F1A8B5B00625116 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		F3190A301F1A9DC600C172BA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F3190A321F1AC5F800C172BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F3190A341F1AF58600C172BA /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		F3190A361F1B1AD400C172BA /* LoginViewController+KeyboardUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+KeyboardUtils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,12 +227,25 @@
 		0A241C1B1F19F088001D3F79 /* Stay Safe Jamaica */ = {
 			isa = PBXGroup;
 			children = (
-				0A0B8D3D1F1AE8D400DC8D23 /* Model */,
-				0A0B8D3E1F1AE8D900DC8D23 /* View */,
-				0A0B8D3F1F1AE8DE00DC8D23 /* Controller */,
-				0A0B8D411F1AE8EB00DC8D23 /* Storyboards */,
-				0A0B8D421F1AE8F200DC8D23 /* Assets */,
-				0A0B8D401F1AE8E500DC8D23 /* Supporting files */,
+				0A241C1C1F19F088001D3F79 /* AppDelegate.swift */,
+				0A241C1E1F19F088001D3F79 /* CrimeReportMapViewController.swift */,
+				EB61C0EF1F1A462000625116 /* CrimeReportViewController.swift */,
+				0A0B8D331F1A8E2E00DC8D23 /* CrimeReportViewController+KeyboardUtils.swift */,
+				F3190A301F1A9DC600C172BA /* LoginViewController.swift */,
+				F3190A341F1AF58600C172BA /* RegisterViewController.swift */,
+				0A241C201F19F088001D3F79 /* Main.storyboard */,
+				0A241C231F19F088001D3F79 /* Assets.xcassets */,
+				0A241C251F19F088001D3F79 /* LaunchScreen.storyboard */,
+				0A241C281F19F088001D3F79 /* Info.plist */,
+				EB61C0FF1F1A832300625116 /* Constants.swift */,
+				EB61C1011F1A839500625116 /* HttpManager.swift */,
+				EB61C1031F1A840F00625116 /* DatabaseManager.swift */,
+				EB61C1051F1A8B5B00625116 /* Models.swift */,
+				0A0B8D351F1A95B700DC8D23 /* Utils.swift */,
+				0A0B8D371F1A99B900DC8D23 /* UIViewController+Utils.swift */,
+				0A0B8D391F1ABADA00DC8D23 /* GCDBlackBox.swift */,
+				F3190A321F1AC5F800C172BA /* GoogleService-Info.plist */,
+				F3190A361F1B1AD400C172BA /* LoginViewController+KeyboardUtils.swift */,
 			);
 			path = "Stay Safe Jamaica";
 			sourceTree = "<group>";
@@ -370,6 +393,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3190A311F1A9DC600C172BA /* LoginViewController.swift in Sources */,
+				F3190A371F1B1AD400C172BA /* LoginViewController+KeyboardUtils.swift in Sources */,
 				0A0B8D361F1A95B700DC8D23 /* Utils.swift in Sources */,
 				0ADE6B901F1B0A6600E15B58 /* Child.swift in Sources */,
 				0A0B8D4F1F1AF29300DC8D23 /* UIView+Utils.swift in Sources */,
@@ -389,6 +414,7 @@
 				0A241C1F1F19F088001D3F79 /* CrimeReportMapViewController.swift in Sources */,
 				0A0B8D561F1AFA0F00DC8D23 /* MissingChildrenViewController+UITableViewDataSource.swift in Sources */,
 				0A241C1D1F19F088001D3F79 /* AppDelegate.swift in Sources */,
+				F3190A351F1AF58600C172BA /* RegisterViewController.swift in Sources */,
 				EB61C1001F1A832300625116 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
