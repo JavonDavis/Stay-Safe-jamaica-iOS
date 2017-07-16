@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  RegisterViewController.swift
 //  Stay Safe Jamaica
 //
 //  Created by Jase-Omeileo West on 7/15/17.
@@ -9,11 +9,13 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController
+class RegisterViewController: UIViewController
 {
-    @IBOutlet weak var userEmailAddress: UITextField!
-    @IBOutlet weak var userPassword: UITextField!
-    
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -27,19 +29,16 @@ class LoginViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func login(_ sender: UIButton)
+    @IBAction func registerUser(_ sender: UIButton)
     {
-        if let emailAddress = userEmailAddress.text, let password = userPassword.text
+        if let firstName = firstNameTextField.text, let lastName = lastNameTextField.text, let email = emailTextField.text, let password = passwordTextField.text
         {
-            Auth.auth().signIn(withEmail: emailAddress, password: password) {(user, error) in
             
-            }
         }
     }
 
-    @IBAction func register(_ sender: UIButton)
+    @IBAction func loginUser(_ sender: UIButton)
     {
-        
     }
     
     /*
