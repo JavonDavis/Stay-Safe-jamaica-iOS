@@ -1,13 +1,12 @@
 //
-//  Models.swift
+//  Report.swift
 //  Stay Safe Jamaica
 //
-//  Created by Jamel Reid  on 7/15/17.
+//  Created by Javon Davis on 7/15/17.
 //  Copyright © 2017 Stay Safe Jamaica. All rights reserved.
 //
 
 import Foundation
-
 
 struct Report {
     
@@ -25,17 +24,17 @@ struct Report {
         self.lon = long
     }
     
-    static func buildObject(_ report: Report?) -> [String:Any] {
+    func buildObject() -> [String:Any] {
         
         let reportObject = [
-            "category": report?.category ?? "",
-            "description": report?.description ?? "",
+            "category": self.category ?? "",
+            "description": self.description ?? "",
             "location" : [
-                "lat": report?.lat,
-                "long": report?.lon
-            ] as! [String: Double]
-        
-        ] as [String : Any]
+                "lat": self.lat,
+                "long": self.lon
+                ] as! [String: Double]
+            
+            ] as [String : Any]
         
         return reportObject
     }
@@ -48,7 +47,7 @@ struct Report {
             
             if let object = value as? [String: Any] {
                 if let location = object["location"] as? [String:Double] {
-        
+                    
                     var reportObject = Report(category: object["category"] as? String, description: object["description"] as? String, lat: location["lat"]!, long: location["long"]!)
                     reportObject.id = key
                     
