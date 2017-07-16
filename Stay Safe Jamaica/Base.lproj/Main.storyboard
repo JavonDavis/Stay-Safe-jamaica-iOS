@@ -225,15 +225,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rXp-tA-p31">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rXp-tA-p31">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MS2-dQ-dhD">
-                                <rect key="frame" x="317" y="49" width="56" height="26"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                <color key="textColor" red="0.16862745098039217" green="0.71372549019607845" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYq-7B-hFw">
                                 <rect key="frame" x="341" y="663" width="52" height="52"/>
                                 <constraints>
@@ -255,11 +249,20 @@
                                 <rect key="frame" x="197" y="358" width="20" height="20"/>
                                 <color key="color" red="0.25098039220000001" green="0.70196078429999997" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSw-l3-zKr">
+                                <rect key="frame" x="324" y="28" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.16862745100000001" green="0.71372549019999998" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EM3-wN-OIp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="MS2-dQ-dhD" secondAttribute="trailing" constant="21" id="D0e-wF-e7q"/>
-                            <constraint firstItem="MS2-dQ-dhD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="D4h-CU-EtO"/>
                             <constraint firstItem="IYq-7B-hFw" firstAttribute="top" secondItem="xg8-Tm-JH8" secondAttribute="bottom" constant="1" id="DvO-47-6Wc"/>
                             <constraint firstItem="YEP-9f-AY4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KaW-Ui-Xns"/>
                             <constraint firstItem="rXp-tA-p31" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Oc6-8k-BTg"/>
@@ -277,11 +280,12 @@
                         <outlet property="crimeReportMapView" destination="rXp-tA-p31" id="Etu-Zt-Zef"/>
                         <outlet property="loadingIndicator" destination="YEP-9f-AY4" id="OXZ-rQ-ixT"/>
                         <segue destination="sYM-IY-yNm" kind="show" identifier="showCrimeReportViewController" id="Ddh-C8-VjA"/>
+                        <segue destination="iwG-k6-aZU" kind="show" identifier="showLoginViewController" id="K1Q-eH-GdF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1138" y="103"/>
+            <point key="canvasLocation" x="1137.68115942029" y="102.71739130434783"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5uF-qJ-LfJ">
@@ -313,10 +317,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Jamaican School Kids" translatesAutoresizingMaskIntoConstraints="NO" id="YRi-qg-xs8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.16862745100000001" green="0.71372549019999998" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jamaican School Kids_Cropped" translatesAutoresizingMaskIntoConstraints="NO" id="YRi-qg-xs8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="tintColor" red="1" green="0.79215686269999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7PR-jL-SjB">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
@@ -410,9 +413,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7PR-jL-SjB" firstAttribute="leading" secondItem="YGi-wA-Y16" secondAttribute="leading" id="4rn-9b-65J"/>
+                            <constraint firstItem="YRi-qg-xs8" firstAttribute="top" secondItem="YGi-wA-Y16" secondAttribute="top" id="5fA-r0-liG"/>
+                            <constraint firstItem="wQr-xg-SMW" firstAttribute="top" secondItem="YRi-qg-xs8" secondAttribute="bottom" id="5hy-Ek-dOd"/>
+                            <constraint firstAttribute="trailing" secondItem="YRi-qg-xs8" secondAttribute="trailing" id="7ER-zg-bM7"/>
                             <constraint firstItem="z3w-Qh-7Lh" firstAttribute="centerY" secondItem="YGi-wA-Y16" secondAttribute="centerY" id="8mG-tg-mkk"/>
                             <constraint firstItem="wQr-xg-SMW" firstAttribute="top" secondItem="7PR-jL-SjB" secondAttribute="bottom" id="Ow8-Sg-yrc"/>
                             <constraint firstAttribute="trailing" secondItem="7PR-jL-SjB" secondAttribute="trailing" id="YJc-KZ-gWX"/>
+                            <constraint firstItem="YRi-qg-xs8" firstAttribute="leading" secondItem="YGi-wA-Y16" secondAttribute="leading" id="cl9-BW-S6v"/>
                             <constraint firstItem="7PR-jL-SjB" firstAttribute="top" secondItem="YGi-wA-Y16" secondAttribute="top" id="gwg-zU-OMp"/>
                             <constraint firstItem="z3w-Qh-7Lh" firstAttribute="centerX" secondItem="YGi-wA-Y16" secondAttribute="centerX" id="vBj-yB-duO"/>
                         </constraints>
@@ -420,11 +427,12 @@
                     <connections>
                         <outlet property="userEmailAddress" destination="6wY-fh-GG4" id="HsH-yS-wdm"/>
                         <outlet property="userPassword" destination="bmi-32-wV9" id="Mj6-5X-8R7"/>
+                        <segue destination="cik-4A-Tks" kind="show" identifier="showRegisterViewController" id="o1J-Jh-LN0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFc-Xt-7LC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="228" y="984"/>
+            <point key="canvasLocation" x="227.536231884058" y="983.96739130434787"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="y0Z-MD-Rfn">
@@ -438,7 +446,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jamaican School Kids" translatesAutoresizingMaskIntoConstraints="NO" id="3Pu-LK-RaN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jamaican School Kids_Cropped" translatesAutoresizingMaskIntoConstraints="NO" id="3Pu-LK-RaN">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARd-2b-9Rb">
@@ -578,6 +586,7 @@
                         <outlet property="firstNameTextField" destination="uDv-NS-LKH" id="eQl-sG-4BL"/>
                         <outlet property="lastNameTextField" destination="Tla-H4-dpG" id="kBm-h4-Faa"/>
                         <outlet property="passwordTextField" destination="qbZ-W7-wtx" id="gXz-3R-vUI"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showReportMapViewController" id="Era-9v-8wl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtH-O6-Bsg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -589,7 +598,7 @@
         <image name="Accident" width="74" height="74"/>
         <image name="Accident-Unselected" width="74" height="74"/>
         <image name="Add Crime" width="52" height="52"/>
-        <image name="Jamaican School Kids" width="1050" height="701"/>
+        <image name="Jamaican School Kids_Cropped" width="375" height="707"/>
         <image name="Logo" width="80" height="80"/>
         <image name="Other Crime" width="74" height="74"/>
         <image name="Other Crime-Unselected" width="74" height="74"/>
@@ -601,4 +610,7 @@
         <image name="Theft-Unselected" width="74" height="74"/>
         <image name="User Location" width="52" height="52"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Era-9v-8wl"/>
+    </inferredMetricsTieBreakers>
 </document>

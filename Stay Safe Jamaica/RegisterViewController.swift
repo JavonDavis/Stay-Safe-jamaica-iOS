@@ -16,11 +16,13 @@ class RegisterViewController: UIViewController
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
+    let showReportMapViewSegue = "showReportMapViewController"
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
     override func didReceiveMemoryWarning()
@@ -33,12 +35,26 @@ class RegisterViewController: UIViewController
     {
         if let firstName = firstNameTextField.text, let lastName = lastNameTextField.text, let email = emailTextField.text, let password = passwordTextField.text
         {
-            
+            Auth.auth().createUser(withEmail: email, password: password) {(user, error) in
+                if error != nil
+                {
+                    //try testing for specific errors
+                    self.showAlert(title: "Error", message: "Sorry, but the information provided won't work. Try again.")
+                }
+                else
+                {
+                    // TODO: set user first and last name
+                    
+                    
+                    self.performSegue(withIdentifier: self.showReportMapViewSegue, sender: self)
+                }
+            }
         }
     }
 
     @IBAction func loginUser(_ sender: UIButton)
     {
+        
     }
     
     /*

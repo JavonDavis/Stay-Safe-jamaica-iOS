@@ -19,6 +19,7 @@ class CrimeReportMapViewController: UIViewController
     var annotations = [MKPointAnnotation]()
     
     let crimeReportSegueIdentifier = "showCrimeReportViewController"
+    let loginSegueIdentifier = "showLoginViewController"
     
     override func viewWillAppear(_ animated: Bool)
     {
@@ -127,6 +128,10 @@ class CrimeReportMapViewController: UIViewController
         }
     }
     
+    @IBAction func loginUser(_ sender: UIButton)
+    {
+        performSegue(withIdentifier: loginSegueIdentifier, sender: self)
+    }
 }
 
 extension CrimeReportMapViewController: MKMapViewDelegate {

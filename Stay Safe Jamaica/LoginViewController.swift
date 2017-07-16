@@ -14,11 +14,13 @@ class LoginViewController: UIViewController
     @IBOutlet weak var userEmailAddress: UITextField!
     @IBOutlet weak var userPassword: UITextField!
     
+    let registerSegueIdentifier = "showRegisterViewController"
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
     override func didReceiveMemoryWarning()
@@ -32,14 +34,21 @@ class LoginViewController: UIViewController
         if let emailAddress = userEmailAddress.text, let password = userPassword.text
         {
             Auth.auth().signIn(withEmail: emailAddress, password: password) {(user, error) in
-            
+                if error != nil
+                {
+                    self.showAlert(title: "Error", message: "Sorry, but you could not be logged in. Try again.")
+                }
+                else
+                {
+                    _ = self.navigationController?.popViewController(animated: true)
+                }
             }
         }
     }
 
     @IBAction func register(_ sender: UIButton)
     {
-        
+        performSegue(withIdentifier: registerSegueIdentifier, sender: self)
     }
     
     /*
